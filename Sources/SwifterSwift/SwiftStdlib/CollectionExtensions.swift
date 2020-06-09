@@ -118,7 +118,7 @@ public extension Collection where Element: BinaryInteger {
     /// - Returns: the average of the array's elements.
     func average() -> Double {
         // http://stackoverflow.com/questions/28288148/making-my-function-calculate-average-of-array-swift
-        guard !isEmpty else { return 0 }
+        guard !isEmpty else { return .zero }
         return Double(reduce(.zero, +)) / Double(count)
     }
 
@@ -133,7 +133,7 @@ public extension Collection where Element: FloatingPoint {
     ///
     /// - Returns: average of the array's elements.
     func average() -> Element {
-        guard !isEmpty else { return 0 }
+        guard !isEmpty else { return .zero }
         return reduce(.zero, +) / Element(count)
     }
 
