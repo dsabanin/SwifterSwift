@@ -109,6 +109,7 @@ public extension NSView {
         }
     }
 
+#if swift(<5.3.0)    
     /// SwifterSwift: Background color of the view; also inspectable from Storyboard.
     @IBInspectable
     var backgroundColor: NSColor? {
@@ -124,7 +125,8 @@ public extension NSView {
             layer?.backgroundColor = newValue?.cgColor
         }
     }
-
+#endif 
+    
     /// SwifterSwift: Size of view.
     var size: CGSize {
         get {
